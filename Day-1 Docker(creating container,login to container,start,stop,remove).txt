@@ -1,0 +1,478 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>docker pa
+docker: unknown command: docker pa
+
+Run 'docker --help' for more information
+
+C:\WINDOWS\system32>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\WINDOWS\system32>docker run -dit --name bhavana nginx:latest
+3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9
+
+C:\WINDOWS\system32>docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                          PORTS     NAMES
+3c812e454d8a   nginx:latest   "/docker-entrypoint.…"   10 seconds ago       Up 10 seconds                   80/tcp    bhavana
+38937c9c3add   nginx:latest   "/docker-entrypoint.…"   About a minute ago   Exited (0) About a minute ago             busy_merkle
+5f739e9e2c00   nginx:latest   "/docker-entrypoint.…"   About an hour ago    Exited (0) 42 minutes ago                 dreamy_wright
+ac4292636bec   nginx:latest   "/docker-entrypoint.…"   About an hour ago    Exited (0) About an hour ago              infallible_black
+3fbecc7dd8ba   nginx:latest   "/docker-entrypoint.…"   About an hour ago    Exited (0) About an hour ago              interesting_shannon
+
+C:\WINDOWS\system32>docker exec -it bhavana bash
+root@3c812e454d8a:/# exit
+exit
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug bhavana
+    Learn more at https://docs.docker.com/go/debug-cli/
+
+C:\WINDOWS\system32>docker stop bhavana
+bhavana
+
+C:\WINDOWS\system32>docker start bhavana
+bhavana
+
+C:\WINDOWS\system32>docker inspect bhavana
+[
+    {
+        "Id": "3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9",
+        "Created": "2026-01-12T13:51:25.200792341Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1138,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-01-12T13:52:20.659977186Z",
+            "FinishedAt": "2026-01-12T13:52:11.494222404Z"
+        },
+        "Image": "sha256:2e97da2b9cb35d218d73fefecde1e8c8864290bedc30ba54f8a817ddaaff6dd6",
+        "ResolvConfPath": "/var/lib/docker/containers/3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9/hostname",
+        "HostsPath": "/var/lib/docker/containers/3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9/hosts",
+        "LogPath": "/var/lib/docker/containers/3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9/3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9-json.log",
+        "Name": "/bhavana",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                30,
+                120
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9",
+                "LowerDir": "/var/lib/docker/overlay2/cc08f6c7c42c4944f348c05d96256194368e21c3a1a1b03cbea04b6fc6b73895-init/diff:/var/lib/docker/overlay2/baa5b45a7f4ed5a5cc3e226a11eb4742cbfaf12242c98ce2b9b6a2783f287ad4/diff:/var/lib/docker/overlay2/19489d4896f3b611624c3d7937aa51aed120ae11155b21534ad36638976d3302/diff:/var/lib/docker/overlay2/541a2f875c9331deb354b9a5b7f030e3c94093291fa7ebe37372dbce9038f589/diff:/var/lib/docker/overlay2/70a382f2964fbd3debd15db93b37225970057e6daa2751d0f82a9ca90c6230dd/diff:/var/lib/docker/overlay2/55156bd34c152eae0d433ebb1ec5dfcee761ccb70710c8ce7f3bb324b87f6948/diff:/var/lib/docker/overlay2/07aba78d4c6bc28e42c882641f4da5f10f3f0b14ad974f80999ec7277a631e69/diff:/var/lib/docker/overlay2/d8ffc408cff7d11b336b25a937298f9d6cc4ae9cd3e314845c9616a667bca34e/diff",
+                "MergedDir": "/var/lib/docker/overlay2/cc08f6c7c42c4944f348c05d96256194368e21c3a1a1b03cbea04b6fc6b73895/merged",
+                "UpperDir": "/var/lib/docker/overlay2/cc08f6c7c42c4944f348c05d96256194368e21c3a1a1b03cbea04b6fc6b73895/diff",
+                "WorkDir": "/var/lib/docker/overlay2/cc08f6c7c42c4944f348c05d96256194368e21c3a1a1b03cbea04b6fc6b73895/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "3c812e454d8a",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.29.4",
+                "NJS_VERSION=0.9.4",
+                "NJS_RELEASE=1~trixie",
+                "ACME_VERSION=0.3.1",
+                "PKG_RELEASE=1~trixie",
+                "DYNPKG_RELEASE=1~trixie"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx:latest",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT",
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "2c5e0fbc1bc8241305b4d56e7414be3a62e0ba07e24a7b62b9a762e435a02d73",
+            "SandboxKey": "/var/run/docker/netns/2c5e0fbc1bc8",
+            "Ports": {
+                "80/tcp": null
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "66:9d:fe:22:4c:62",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "b62230cac0c20027411b4263e062d1c54b22e3c3596cbe89d4c61ae78727c763",
+                    "EndpointID": "d098cc834a709ad54cdc65066e842e50b902bd4a647cd3bce7956573774d0bc7",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]
+
+C:\WINDOWS\system32>docker rm bhavana
+Error response from daemon: cannot remove container "bhavana": container is running: stop the container before removing or force remove
+
+C:\WINDOWS\system32>docker run --rm -dit --name bhavana -publish 8080:80 nginx:latest
+docker: invalid containerPort: ublish
+
+Run 'docker run --help' for more information
+
+C:\WINDOWS\system32>docker run --rm -dit --name bhavana -p 8080:80 nginx:latest
+docker: Error response from daemon: Conflict. The container name "/bhavana" is already in use by container "3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+
+C:\WINDOWS\system32>
+C:\WINDOWS\system32>docker stop bhavana
+bhavana
+
+C:\WINDOWS\system32>docker run --rm -dit --name bhavana -p 8080:80 nginx:latest
+docker: Error response from daemon: Conflict. The container name "/bhavana" is already in use by container "3c812e454d8acc2fba04f24695209ebf1e9d095f89ba27857c4a09f5684373c9". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+
+C:\WINDOWS\system32>docker rm bhavana
+bhavana
+
+C:\WINDOWS\system32>docker run --rm -dit --name bhavana -p 8080:80 nginx:latest
+119df1527bf2a9b93b00cf5ac644bed49a1b813f00424ec7c15928d7ceb1517c
+docker: Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:8080 -> 127.0.0.1:0: listen tcp 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+Run 'docker run --help' for more information
+
+C:\WINDOWS\system32>docker exec -it bhavana bash
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug bhavana
+    Learn more at https://docs.docker.com/go/debug-cli/
+Error response from daemon: No such container: bhavana
+
+C:\WINDOWS\system32>cd /usr/share/nginx/html
+The system cannot find the path specified.
+
+C:\WINDOWS\system32>apt install -y nano
+'apt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>docker exec -it bhavana bash
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug bhavana
+    Learn more at https://docs.docker.com/go/debug-cli/
+Error response from daemon: No such container: bhavana
+
+C:\WINDOWS\system32>apt update
+'apt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>apt install -y nano
+'apt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>docker exec -it bhavana bash
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug bhavana
+    Learn more at https://docs.docker.com/go/debug-cli/
+Error response from daemon: No such container: bhavana
+
+C:\WINDOWS\system32>apt update
+'apt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS                         PORTS     NAMES
+38937c9c3add   nginx:latest   "/docker-entrypoint.…"   8 minutes ago       Exited (0) 8 minutes ago                 busy_merkle
+5f739e9e2c00   nginx:latest   "/docker-entrypoint.…"   About an hour ago   Exited (0) 49 minutes ago                dreamy_wright
+ac4292636bec   nginx:latest   "/docker-entrypoint.…"   About an hour ago   Exited (0) About an hour ago             infallible_black
+3fbecc7dd8ba   nginx:latest   "/docker-entrypoint.…"   2 hours ago         Exited (0) About an hour ago             interesting_shannon
+
+C:\WINDOWS\system32>docker run --rm -dit --name bhavana -p 8080:80 nginx:latest
+576b55191693b305a6f083f62dd0e07c3d09eb1a7b407927eab4059ac7f02934
+docker: Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:8080 -> 127.0.0.1:0: listen tcp 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+Run 'docker run --help' for more information
+
+C:\WINDOWS\system32>apt update
+'apt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>netstat -ano | findstr :8080
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       5772
+  TCP    [::]:8080              [::]:0                 LISTENING       5772
+
+C:\WINDOWS\system32>taskkill /PID <PID> /F
+The system cannot find the file specified.
+
+C:\WINDOWS\system32>taskkill /PID 8080 /F
+ERROR: The process "8080" not found.
+
+C:\WINDOWS\system32>taskkill /PID 5772 /F
+SUCCESS: The process with PID 5772 has been terminated.
+
+C:\WINDOWS\system32>docker run --rm -dit --name bhavana -p 8080:80 nginx
+41e171f54e3e5b7ca5d94b9760587f869d1e18482be6160e3b558727adecf991
+
+C:\WINDOWS\system32>apt install -y nano
+'apt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>docker exec -it bhavana bash
+root@41e171f54e3e:/# apt install -y nano
+Error: Unable to locate package nano
+root@41e171f54e3e:/# apt update
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9670 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [94.5 kB]
+Fetched 10.0 MB in 5s (1832 kB/s)
+8 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@41e171f54e3e:/# apt install -y nano
+Installing:
+  nano
+
+Installing dependencies:
+  libgpm2  libncursesw6
+
+Suggested packages:
+  gpm  hunspell
+
+Summary:
+  Upgrading: 0, Installing: 3, Removing: 0, Not Upgrading: 8
+  Download size: 795 kB
+  Space needed: 3382 kB / 1024 GB available
+
+Get:1 http://deb.debian.org/debian trixie/main amd64 libncursesw6 amd64 6.5+20250216-2 [135 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 nano amd64 8.4-1 [645 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libgpm2 amd64 1.20.7-11+b2 [14.4 kB]
+Fetched 795 kB in 1s (1480 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 3.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 3.)
+debconf: falling back to frontend: Teletype
+Selecting previously unselected package libncursesw6:amd64.
+(Reading database ... 6705 files and directories currently installed.)
+Preparing to unpack .../libncursesw6_6.5+20250216-2_amd64.deb ...
+Unpacking libncursesw6:amd64 (6.5+20250216-2) ...
+Selecting previously unselected package nano.
+Preparing to unpack .../archives/nano_8.4-1_amd64.deb ...
+Unpacking nano (8.4-1) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../libgpm2_1.20.7-11+b2_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-11+b2) ...
+Setting up libgpm2:amd64 (1.20.7-11+b2) ...
+Setting up libncursesw6:amd64 (6.5+20250216-2) ...
+Setting up nano (8.4-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+Processing triggers for libc-bin (2.41-12) ...
+root@41e171f54e3e:/# nano index.html
+root@41e171f54e3e:/# exit
+exit
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug bhavana
+    Learn more at https://docs.docker.com/go/debug-cli/
+
+Uses of Commands
+================
+create container : docker run ngix:latest
+2. Check running containers
+docker ps
+
+3. Run container in detached mode with name
+docker run -dit --name bhavana nginx:latest
+
+4. Check all containers
+docker ps -a
+
+5. Login to container
+docker exec -it bhavana bash
+
+6. Exit container
+exit
+
+7. Stop container
+docker stop bhavana
+
+8. Start container
+docker start bhavana
+
+9. Inspect container
+docker inspect bhavana
+
+10. Remove container
+docker rm bhavana
+With Port Mapping (Publish)
+
+11. Run nginx with port mapping
+docker run --rm -dit --name bhavana -publish 8080:80 nginx:latest
+
+12. Login to container
+docker exec -it bhavana bash
+
+13. Go to nginx html path
+cd /usr/share/nginx/html
+
+14. Install nano
+apt install -y nano
+
+15. Edit content
+nano index.html
+Save → Ctrl+O
+Exit → Ctrl+X
